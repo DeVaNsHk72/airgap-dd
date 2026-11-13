@@ -1,0 +1,40 @@
+{
+  "title": "airgap-dd: simulated replay channel for speech deepfake detection on edge voice devices",
+  "upload_type": "software",
+  "description": "Code and result files for the study \"Can a Simulated Replay Channel Replace Real Replay Data? A Controlled Study of Speech Deepfake Detection for Edge Voice Devices\". Contains the four-stage replay channel simulator (loudspeaker response, nonlinear distortion, room impulse response, codec), feature extraction, detectors, evaluation code, a personalised liveness detector for a Raspberry Pi, and the scripts and result files for the liveness experiments. No audio is included.",
+  "license": "MIT",
+  "keywords": [
+    "audio deepfake detection",
+    "anti-spoofing",
+    "replay attack",
+    "liveness detection",
+    "data augmentation",
+    "edge computing"
+  ],
+  "creators": [
+    {
+      "name": "Tejashwini A G",
+      "affiliation": "B.M.S. College of Engineering, Bengaluru, India"
+    },
+    {
+      "name": "Gourayya, Medha",
+      "affiliation": "B.M.S. College of Engineering, Bengaluru, India"
+    },
+    {
+      "name": "Khetan, Devansh",
+      "affiliation": "B.M.S. College of Engineering, Bengaluru, India"
+    },
+    {
+      "name": "Nayak, Nagaraj",
+      "affiliation": "B.M.S. College of Engineering, Bengaluru, India"
+    },
+    {
+      "name": "Badhera, Parv",
+      "affiliation": "B.M.S. College of Engineering, Bengaluru, India"
+    },
+    {
+      "name": "Kalyan, Tushar",
+      "affiliation": "B.M.S. College of Engineering, Bengaluru, India"
+    }
+  ]
+}
