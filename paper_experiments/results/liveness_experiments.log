@@ -1,0 +1,44 @@
+== E1 main
+general                              sim 45.88 [41.8,48.9]  measured 56.32 [52.6,59.7]  live acc 75.0  rej {np.str_('replay_genuine'): 11.940298507462686, np.str_('replay_xtts_v2'): 87.5, np.str_('replay_your_tts'): 89.16666666666667}
+    per class sim: {'eer_replay_genuine': 66.79, 'eer_replay_xtts_v2': 16.73, 'eer_replay_your_tts': 13.38}
+personalized (continued boosting)    sim  5.55 [4.0,7.5]  measured 12.64 [10.1,15.3]  live acc 93.3  rej {np.str_('replay_genuine'): 98.50746268656717, np.str_('replay_xtts_v2'): 94.16666666666667, np.str_('replay_your_tts'): 90.0}
+    per class sim: {'eer_replay_genuine': 4.48, 'eer_replay_xtts_v2': 6.5, 'eer_replay_your_tts': 8.27}
+personal, from scratch               sim  9.77 [7.5,12.6]  measured 13.89 [11.5,16.8]  live acc 89.9  rej {np.str_('replay_genuine'): 99.6268656716418, np.str_('replay_xtts_v2'): 86.66666666666667, np.str_('replay_your_tts'): 72.5}
+    per class sim: {'eer_replay_genuine': 5.6, 'eer_replay_xtts_v2': 10.83, 'eer_replay_your_tts': 12.59}
+== E3 feature groups
+spectral (50)                    sim 13.03  measured 16.38
+reverberation (3)                sim 39.94  measured 42.91
+residual (3)                     sim 11.97  measured 14.56
+reverberation + residual (6)     sim 10.82  measured 13.79
+all (56)                         sim  9.77  measured 13.89
+== E5 training channel
+loudspeaker + distortion     {'sim_rooms': 12.26, 'measured_rooms': 16.38, 'spk_only_test': 19.35, 'room_only_test': 16.38}
+room only                    {'sim_rooms': 11.59, 'measured_rooms': 14.18, 'spk_only_test': 26.15, 'room_only_test': 11.97}
+full chain                   {'sim_rooms': 5.55, 'measured_rooms': 12.64, 'spk_only_test': 20.11, 'room_only_test': 10.44}
+== E6 one-class
+Mahalanobis | all (56) | train day                                     {'sim_rooms': 1.82, 'sim_rooms_ci': [0.8, 3.0], 'eer_replay_genuine': 1.12, 'eer_replay_xtts_v2': 2.56, 'eer_replay_your_tts': 1.58, 'measured_rooms': 2.97, 'measured_rooms_ci': [1.8, 4.9], 'spk_only': 10.06, 'room_only': 8.24}
+Isolation forest | all (56) | train day                                {'sim_rooms': 6.8, 'sim_rooms_ci': [4.9, 9.3], 'eer_replay_genuine': 7.09, 'eer_replay_xtts_v2': 7.29, 'eer_replay_your_tts': 4.14, 'measured_rooms': 6.7, 'measured_rooms_ci': [4.9, 8.6], 'spk_only': 17.91, 'room_only': 16.09}
+One-class SVM | all (56) | train day                                   {'sim_rooms': 5.27, 'sim_rooms_ci': [3.7, 6.8], 'eer_replay_genuine': 5.22, 'eer_replay_xtts_v2': 7.48, 'eer_replay_your_tts': 4.14, 'measured_rooms': 5.94, 'measured_rooms_ci': [4.4, 7.9], 'spk_only': 16.09, 'room_only': 15.71}
+Mahalanobis | spectral (50) | train day                                {'sim_rooms': 4.5, 'sim_rooms_ci': [2.7, 6.3], 'eer_replay_genuine': 4.48, 'eer_replay_xtts_v2': 4.14, 'eer_replay_your_tts': 4.32, 'measured_rooms': 4.5, 'measured_rooms_ci': [3.0, 6.3], 'spk_only': 13.41, 'room_only': 15.33}
+Isolation forest | spectral (50) | train day                           {'sim_rooms': 8.62, 'sim_rooms_ci': [6.7, 11.2], 'eer_replay_genuine': 11.19, 'eer_replay_xtts_v2': 7.67, 'eer_replay_your_tts': 4.32, 'measured_rooms': 8.24, 'measured_rooms_ci': [6.3, 10.2], 'spk_only': 23.85, 'room_only': 18.68}
+One-class SVM | spectral (50) | train day                              {'sim_rooms': 8.62, 'sim_rooms_ci': [6.7, 10.5], 'eer_replay_genuine': 10.45, 'eer_replay_xtts_v2': 7.48, 'eer_replay_your_tts': 4.32, 'measured_rooms': 7.47, 'measured_rooms_ci': [5.7, 9.3], 'spk_only': 20.88, 'room_only': 18.68}
+Mahalanobis | reverberation + residual (6) | train day                 {'sim_rooms': 20.5, 'sim_rooms_ci': [17.5, 23.2], 'eer_replay_genuine': 4.48, 'eer_replay_xtts_v2': 26.58, 'eer_replay_your_tts': 33.46, 'measured_rooms': 20.11, 'measured_rooms_ci': [17.1, 22.8], 'spk_only': 17.53, 'room_only': 24.23}
+Isolation forest | reverberation + residual (6) | train day            {'sim_rooms': 13.41, 'sim_rooms_ci': [10.4, 15.7], 'eer_replay_genuine': 10.82, 'eer_replay_xtts_v2': 10.83, 'eer_replay_your_tts': 20.86, 'measured_rooms': 14.56, 'measured_rooms_ci': [11.6, 17.2], 'spk_only': 12.36, 'room_only': 18.96}
+One-class SVM | reverberation + residual (6) | train day               {'sim_rooms': 13.79, 'sim_rooms_ci': [11.6, 16.8], 'eer_replay_genuine': 2.24, 'eer_replay_xtts_v2': 16.54, 'eer_replay_your_tts': 24.21, 'measured_rooms': 15.71, 'measured_rooms_ci': [13.4, 18.7], 'spk_only': 13.12, 'room_only': 17.91}
+Mahalanobis | all (56) | train + dev days                              {'sim_rooms': 1.82, 'sim_rooms_ci': [1.0, 3.4], 'eer_replay_genuine': 1.49, 'eer_replay_xtts_v2': 3.35, 'eer_replay_your_tts': 1.77, 'measured_rooms': 3.35, 'measured_rooms_ci': [1.8, 4.5], 'spk_only': 10.44, 'room_only': 7.85}
+Isolation forest | all (56) | train + dev days                         {'sim_rooms': 7.47, 'sim_rooms_ci': [5.3, 9.3], 'eer_replay_genuine': 7.46, 'eer_replay_xtts_v2': 8.27, 'eer_replay_your_tts': 4.32, 'measured_rooms': 5.94, 'measured_rooms_ci': [4.5, 8.1], 'spk_only': 17.63, 'room_only': 14.56}
+One-class SVM | all (56) | train + dev days                            {'sim_rooms': 5.55, 'sim_rooms_ci': [4.0, 7.4], 'eer_replay_genuine': 5.6, 'eer_replay_xtts_v2': 7.48, 'eer_replay_your_tts': 4.14, 'measured_rooms': 5.65, 'measured_rooms_ci': [4.1, 7.1], 'spk_only': 16.38, 'room_only': 16.38}
+Mahalanobis | spectral (50) | train + dev days                         {'sim_rooms': 4.89, 'sim_rooms_ci': [3.0, 7.1], 'eer_replay_genuine': 5.6, 'eer_replay_xtts_v2': 4.32, 'eer_replay_your_tts': 4.93, 'measured_rooms': 5.27, 'measured_rooms_ci': [3.5, 6.8], 'spk_only': 13.79, 'room_only': 12.74}
+Isolation forest | spectral (50) | train + dev days                    {'sim_rooms': 10.54, 'sim_rooms_ci': [8.6, 13.0], 'eer_replay_genuine': 13.06, 'eer_replay_xtts_v2': 10.04, 'eer_replay_your_tts': 5.9, 'measured_rooms': 9.01, 'measured_rooms_ci': [6.7, 11.2], 'spk_only': 24.23, 'room_only': 19.35}
+One-class SVM | spectral (50) | train + dev days                       {'sim_rooms': 9.29, 'sim_rooms_ci': [7.4, 11.5], 'eer_replay_genuine': 11.57, 'eer_replay_xtts_v2': 8.27, 'eer_replay_your_tts': 4.32, 'measured_rooms': 7.37, 'measured_rooms_ci': [5.6, 9.0], 'spk_only': 22.32, 'room_only': 18.2}
+Mahalanobis | reverberation + residual (6) | train + dev days          {'sim_rooms': 19.06, 'sim_rooms_ci': [16.4, 22.3], 'eer_replay_genuine': 4.1, 'eer_replay_xtts_v2': 25.79, 'eer_replay_your_tts': 32.48, 'measured_rooms': 18.68, 'measured_rooms_ci': [16.1, 22.0], 'spk_only': 17.24, 'room_only': 22.8}
+Isolation forest | reverberation + residual (6) | train + dev days     {'sim_rooms': 12.64, 'sim_rooms_ci': [10.1, 15.2], 'eer_replay_genuine': 9.7, 'eer_replay_xtts_v2': 9.25, 'eer_replay_your_tts': 20.86, 'measured_rooms': 14.18, 'measured_rooms_ci': [11.6, 16.9], 'spk_only': 12.64, 'room_only': 17.53}
+One-class SVM | reverberation + residual (6) | train + dev days        {'sim_rooms': 14.84, 'sim_rooms_ci': [12.3, 17.5], 'eer_replay_genuine': 1.87, 'eer_replay_xtts_v2': 17.33, 'eer_replay_your_tts': 25.79, 'measured_rooms': 16.76, 'measured_rooms_ci': [13.1, 19.0], 'spk_only': 13.79, 'room_only': 16.76}
+== E7 enrollment size
+n=  10 ( 0.4 min)  EER 45.88 +- 0.00
+n=  20 ( 0.8 min)  EER  5.91 +- 1.83
+n=  40 ( 1.7 min)  EER  6.47 +- 1.68
+n=  80 ( 3.3 min)  EER  7.05 +- 1.22
+n= 160 ( 6.7 min)  EER  6.61 +- 1.24
+n= 334 (13.9 min)  EER  5.55 +- 0.00
+{'train': {np.str_('live'): 334, np.str_('replay_genuine'): 334, np.str_('replay_xtts_v2'): 300, np.str_('replay_your_tts'): 0}, 'dev': {np.str_('live'): 64, np.str_('replay_genuine'): 64, np.str_('replay_xtts_v2'): 60, np.str_('replay_your_tts'): 0}, 'test': {np.str_('live'): 268, np.str_('replay_genuine'): 268, np.str_('replay_xtts_v2'): 120, np.str_('replay_your_tts'): 120}}

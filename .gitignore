@@ -1,0 +1,43 @@
+# Rule 6: nothing under data/ is committed
+data/
+
+# Downloaded corpora that landed at repo root
+fake/
+*.tgz
+*.zip
+*.tar.gz
+*.h5
+
+# Model artefacts (regenerable, and large)
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.pkl
+*.onnx
+*.tflite
+
+# Intermediate numeric caches under results/ (the .md/.png evidence stays)
+results/**/*.npy
+results/**/*.npz
+
+# Environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.cache/
+logs/
+runs/
+wandb/
+.DS_Store
+
+# Vendored model weights (fetched by script, MIT-licensed upstream)
+third_party/aasist/weights/
+
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg

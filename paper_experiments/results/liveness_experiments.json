@@ -1,0 +1,496 @@
+{
+ "E1": {
+  "general": {
+   "sim_rooms": {
+    "eer": 45.880832060171585,
+    "ci": [
+     41.76166412034317,
+     48.94817252321072
+    ],
+    "eer_replay_genuine": 66.7910447761194,
+    "eer_replay_xtts_v2": 16.728855721393035,
+    "eer_replay_your_tts": 13.38308457711443
+   },
+   "measured_rooms": {
+    "eer": 56.321248090257384,
+    "ci": [
+     52.58549770830885,
+     59.67358091432601
+    ],
+    "eer_replay_genuine": 68.65671641791045,
+    "eer_replay_xtts_v2": 34.24751243781095,
+    "eer_replay_your_tts": 40.75248756218905
+   },
+   "live_accept": 75.0,
+   "reject": {
+    "replay_genuine": 11.940298507462686,
+    "replay_xtts_v2": 87.5,
+    "replay_your_tts": 89.16666666666667
+   }
+  },
+  "personalized (continued boosting)": {
+   "sim_rooms": {
+    "eer": 5.554412974497591,
+    "ci": [
+     4.0207427429780225,
+     7.47150076389705
+    ],
+    "eer_replay_genuine": 4.477611940298507,
+    "eer_replay_xtts_v2": 6.5049751243781095,
+    "eer_replay_your_tts": 8.271144278606965
+   },
+   "measured_rooms": {
+    "eer": 12.642496180514751,
+    "ci": [
+     10.0569984722059,
+     15.326419085673992
+    ],
+    "eer_replay_genuine": 5.970149253731343,
+    "eer_replay_xtts_v2": 16.54228855721393,
+    "eer_replay_your_tts": 20.07462686567164
+   },
+   "live_accept": 93.28358208955224,
+   "reject": {
+    "replay_genuine": 98.50746268656717,
+    "replay_xtts_v2": 94.16666666666667,
+    "replay_your_tts": 90.0
+   }
+  },
+  "personal, from scratch": {
+   "sim_rooms": {
+    "eer": 9.7720061111764,
+    "ci": [
+     7.47150076389705,
+     12.642496180514751
+    ],
+    "eer_replay_genuine": 5.597014925373134,
+    "eer_replay_xtts_v2": 10.827114427860696,
+    "eer_replay_your_tts": 12.593283582089555
+   },
+   "measured_rooms": {
+    "eer": 13.891174051004818,
+    "ci": [
+     11.492243506875074,
+     16.761664120343166
+    ],
+    "eer_replay_genuine": 8.955223880597014,
+    "eer_replay_xtts_v2": 15.939054726368157,
+    "eer_replay_your_tts": 20.07462686567164
+   },
+   "live_accept": 89.92537313432835,
+   "reject": {
+    "replay_genuine": 99.6268656716418,
+    "replay_xtts_v2": 86.66666666666667,
+    "replay_your_tts": 72.5
+   }
+  }
+ },
+ "E3": {
+  "spectral (50)": {
+   "sim_rooms": 13.02591373839464,
+   "measured_rooms": 16.37824656246327
+  },
+  "reverberation (3)": {
+   "sim_rooms": 39.943001527794095,
+   "measured_rooms": 42.91191679398284
+  },
+  "residual (3)": {
+   "sim_rooms": 11.97408626160536,
+   "measured_rooms": 14.559583969914208
+  },
+  "reverberation + residual (6)": {
+   "sim_rooms": 10.823833587965684,
+   "measured_rooms": 13.792748854154425
+  },
+  "all (56)": {
+   "sim_rooms": 9.7720061111764,
+   "measured_rooms": 13.891174051004818
+  }
+ },
+ "E5": {
+  "loudspeaker + distortion": {
+   "sim_rooms": 12.259078622634858,
+   "measured_rooms": 16.37824656246327,
+   "spk_only_test": 19.347161828652016,
+   "room_only_test": 16.37824656246327
+  },
+  "room only": {
+   "sim_rooms": 11.590668703725468,
+   "measured_rooms": 14.176166412034316,
+   "spk_only_test": 26.150252673639674,
+   "room_only_test": 11.97408626160536
+  },
+  "full chain": {
+   "sim_rooms": 5.554412974497591,
+   "measured_rooms": 12.642496180514751,
+   "spk_only_test": 20.1139969444118,
+   "room_only_test": 10.440416030085792
+  }
+ },
+ "E6": {
+  "Mahalanobis | all (56) | train day": {
+   "sim_rooms": 1.8186625925490654,
+   "sim_rooms_ci": [
+    0.7668351157597838,
+    2.9689152661887412
+   ],
+   "eer_replay_genuine": 1.1194029850746268,
+   "eer_replay_xtts_v2": 2.5559701492537314,
+   "eer_replay_your_tts": 1.579601990049751,
+   "measured_rooms": 2.9689152661887412,
+   "measured_rooms_ci": [
+    1.8115377835233284,
+    4.8860030555882
+   ],
+   "spk_only": 10.0569984722059,
+   "room_only": 8.238335879656834
+  },
+  "Isolation forest | all (56) | train day": {
+   "sim_rooms": 6.803090844987661,
+   "sim_rooms_ci": [
+    4.8860030555882,
+    9.290163356446115
+   ],
+   "eer_replay_genuine": 7.08955223880597,
+   "eer_replay_xtts_v2": 7.294776119402985,
+   "eer_replay_your_tts": 4.135572139303482,
+   "measured_rooms": 6.704665648137268,
+   "measured_rooms_ci": [
+    4.8860030555882,
+    8.621753437536725
+   ],
+   "spk_only": 17.91191679398284,
+   "room_only": 16.093254201433776
+  },
+  "One-class SVM | all (56) | train day": {
+   "sim_rooms": 5.2694206134680925,
+   "sim_rooms_ci": [
+    3.735750381948525,
+    6.810215654013392
+   ],
+   "eer_replay_genuine": 5.223880597014925,
+   "eer_replay_xtts_v2": 7.48134328358209,
+   "eer_replay_your_tts": 4.135572139303482,
+   "measured_rooms": 5.9378305323774825,
+   "measured_rooms_ci": [
+    4.404160300857915,
+    7.8549183217769425
+   ],
+   "spk_only": 16.093254201433776,
+   "room_only": 15.709836643553885
+  },
+  "Mahalanobis | spectral (50) | train day": {
+   "sim_rooms": 4.502585497708308,
+   "sim_rooms_ci": [
+    2.683922905159243,
+    6.3212480902573756
+   ],
+   "eer_replay_genuine": 4.477611940298507,
+   "eer_replay_xtts_v2": 4.135572139303482,
+   "eer_replay_your_tts": 4.322139303482587,
+   "measured_rooms": 4.502585497708308,
+   "measured_rooms_ci": [
+    2.9689152661887412,
+    6.3212480902573756
+   ],
+   "spk_only": 13.409331296274535,
+   "room_only": 15.326419085673992
+  },
+  "Isolation forest | spectral (50) | train day": {
+   "sim_rooms": 8.621753437536725,
+   "sim_rooms_ci": [
+    6.704665648137268,
+    11.207251145845575
+   ],
+   "eer_replay_genuine": 11.194029850746269,
+   "eer_replay_xtts_v2": 7.667910447761194,
+   "eer_replay_your_tts": 4.322139303482587,
+   "measured_rooms": 8.238335879656834,
+   "measured_rooms_ci": [
+    6.3212480902573756,
+    10.155423669056294
+   ],
+   "spk_only": 23.849747326360323,
+   "room_only": 18.678751909742626
+  },
+  "One-class SVM | spectral (50) | train day": {
+   "sim_rooms": 8.621753437536725,
+   "sim_rooms_ci": [
+    6.704665648137268,
+    10.538841226936185
+   ],
+   "eer_replay_genuine": 10.44776119402985,
+   "eer_replay_xtts_v2": 7.48134328358209,
+   "eer_replay_your_tts": 4.322139303482587,
+   "measured_rooms": 7.47150076389705,
+   "measured_rooms_ci": [
+    5.652838171347985,
+    9.290163356446115
+   ],
+   "spk_only": 20.880832060171585,
+   "room_only": 18.678751909742626
+  },
+  "Mahalanobis | reverberation + residual (6) | train day": {
+   "sim_rooms": 20.49741450229169,
+   "sim_rooms_ci": [
+    17.528499236102952,
+    23.181337407450936
+   ],
+   "eer_replay_genuine": 4.477611940298507,
+   "eer_replay_xtts_v2": 26.57960199004975,
+   "eer_replay_your_tts": 33.45771144278607,
+   "measured_rooms": 20.1139969444118,
+   "measured_rooms_ci": [
+    17.145081678223058,
+    22.79791984957104
+   ],
+   "spk_only": 17.528499236102952,
+   "room_only": 24.233164884240217
+  },
+  "Isolation forest | reverberation + residual (6) | train day": {
+   "sim_rooms": 13.409331296274535,
+   "sim_rooms_ci": [
+    10.440416030085792,
+    15.709836643553885
+   ],
+   "eer_replay_genuine": 10.820895522388058,
+   "eer_replay_xtts_v2": 10.827114427860696,
+   "eer_replay_your_tts": 20.864427860696516,
+   "measured_rooms": 14.559583969914208,
+   "measured_rooms_ci": [
+    11.590668703725468,
+    17.24350687507345
+   ],
+   "spk_only": 12.35750381948525,
+   "room_only": 18.963744270772125
+  },
+  "One-class SVM | reverberation + residual (6) | train day": {
+   "sim_rooms": 13.792748854154425,
+   "sim_rooms_ci": [
+    11.590668703725468,
+    16.761664120343166
+   ],
+   "eer_replay_genuine": 2.2388059701492535,
+   "eer_replay_xtts_v2": 16.54228855721393,
+   "eer_replay_your_tts": 24.210199004975124,
+   "measured_rooms": 15.709836643553885,
+   "measured_rooms_ci": [
+    13.409331296274535,
+    18.678751909742626
+   ],
+   "spk_only": 13.124338935245033,
+   "room_only": 17.91191679398284
+  },
+  "Mahalanobis | all (56) | train + dev days": {
+   "sim_rooms": 1.8186625925490654,
+   "sim_rooms_ci": [
+    1.044702667763545,
+    3.352332824068634
+   ],
+   "eer_replay_genuine": 1.4925373134328357,
+   "eer_replay_xtts_v2": 3.3457711442786073,
+   "eer_replay_your_tts": 1.7661691542288556,
+   "measured_rooms": 3.352332824068634,
+   "measured_rooms_ci": [
+    1.8186625925490654,
+    4.502585497708308
+   ],
+   "spk_only": 10.440416030085792,
+   "room_only": 7.8549183217769425
+  },
+  "Isolation forest | all (56) | train + dev days": {
+   "sim_rooms": 7.47150076389705,
+   "sim_rooms_ci": [
+    5.2694206134680925,
+    9.290163356446115
+   ],
+   "eer_replay_genuine": 7.462686567164178,
+   "eer_replay_xtts_v2": 8.271144278606965,
+   "eer_replay_your_tts": 4.322139303482587,
+   "measured_rooms": 5.9378305323774825,
+   "measured_rooms_ci": [
+    4.502585497708308,
+    8.13991068280644
+   ],
+   "spk_only": 17.626924432953345,
+   "room_only": 14.559583969914208
+  },
+  "One-class SVM | all (56) | train + dev days": {
+   "sim_rooms": 5.554412974497591,
+   "sim_rooms_ci": [
+    4.0207427429780225,
+    7.373075567046655
+   ],
+   "eer_replay_genuine": 5.597014925373134,
+   "eer_replay_xtts_v2": 7.48134328358209,
+   "eer_replay_your_tts": 4.135572139303482,
+   "measured_rooms": 5.652838171347985,
+   "measured_rooms_ci": [
+    4.116707309907158,
+    7.088083206017158
+   ],
+   "spk_only": 16.37824656246327,
+   "room_only": 16.37824656246327
+  },
+  "Mahalanobis | spectral (50) | train + dev days": {
+   "sim_rooms": 4.8860030555882,
+   "sim_rooms_ci": [
+    2.9689152661887412,
+    7.088083206017158
+   ],
+   "eer_replay_genuine": 5.597014925373134,
+   "eer_replay_xtts_v2": 4.322139303482587,
+   "eer_replay_your_tts": 4.925373134328359,
+   "measured_rooms": 5.2694206134680925,
+   "measured_rooms_ci": [
+    3.4507580209190274,
+    6.803090844987661
+   ],
+   "spk_only": 13.792748854154425,
+   "room_only": 12.740921377365144
+  },
+  "Isolation forest | spectral (50) | train + dev days": {
+   "sim_rooms": 10.538841226936185,
+   "sim_rooms_ci": [
+    8.621753437536725,
+    13.02591373839464
+   ],
+   "eer_replay_genuine": 13.059701492537313,
+   "eer_replay_xtts_v2": 10.03731343283582,
+   "eer_replay_your_tts": 5.901741293532338,
+   "measured_rooms": 9.005170995416616,
+   "measured_rooms_ci": [
+    6.704665648137268,
+    11.207251145845575
+   ],
+   "spk_only": 24.233164884240217,
+   "room_only": 19.347161828652016
+  },
+  "One-class SVM | spectral (50) | train + dev days": {
+   "sim_rooms": 9.290163356446115,
+   "sim_rooms_ci": [
+    7.373075567046655,
+    11.494704136796331
+   ],
+   "eer_replay_genuine": 11.567164179104477,
+   "eer_replay_xtts_v2": 8.271144278606965,
+   "eer_replay_your_tts": 4.322139303482587,
+   "measured_rooms": 7.373075567046655,
+   "measured_rooms_ci": [
+    5.554412974497591,
+    9.005170995416616
+   ],
+   "spk_only": 22.316077094840757,
+   "room_only": 18.196909155012342
+  },
+  "Mahalanobis | reverberation + residual (6) | train + dev days": {
+   "sim_rooms": 19.062169467622518,
+   "sim_rooms_ci": [
+    16.37824656246327,
+    22.316077094840757
+   ],
+   "eer_replay_genuine": 4.104477611940299,
+   "eer_replay_xtts_v2": 25.78980099502488,
+   "eer_replay_your_tts": 32.481343283582085,
+   "measured_rooms": 18.678751909742626,
+   "measured_rooms_ci": [
+    16.093254201433776,
+    22.031084733811255
+   ],
+   "spk_only": 17.24350687507345,
+   "room_only": 22.79791984957104
+  },
+  "Isolation forest | reverberation + residual (6) | train + dev days": {
+   "sim_rooms": 12.642496180514751,
+   "sim_rooms_ci": [
+    10.0569984722059,
+    15.230454518744857
+   ],
+   "eer_replay_genuine": 9.701492537313433,
+   "eer_replay_xtts_v2": 9.247512437810945,
+   "eer_replay_your_tts": 20.864427860696516,
+   "measured_rooms": 14.176166412034316,
+   "measured_rooms_ci": [
+    11.590668703725468,
+    16.86721412621929
+   ],
+   "spk_only": 12.642496180514751,
+   "room_only": 17.528499236102952
+  },
+  "One-class SVM | reverberation + residual (6) | train + dev days": {
+   "sim_rooms": 14.844576330943704,
+   "sim_rooms_ci": [
+    12.259078622634858,
+    17.528499236102952
+   ],
+   "eer_replay_genuine": 1.8656716417910446,
+   "eer_replay_xtts_v2": 17.332089552238806,
+   "eer_replay_your_tts": 25.78980099502488,
+   "measured_rooms": 16.761664120343166,
+   "measured_rooms_ci": [
+    13.124338935245033,
+    18.963744270772125
+   ],
+   "spk_only": 13.792748854154425,
+   "room_only": 16.761664120343166
+  }
+ },
+ "E7": {
+  "10": {
+   "seconds": 25.0,
+   "mean": 45.880832060171585,
+   "std": 0.0,
+   "runs": 10
+  },
+  "20": {
+   "seconds": 50.0,
+   "mean": 5.910359619226701,
+   "std": 1.8310305483969533,
+   "runs": 10
+  },
+  "40": {
+   "seconds": 100.0,
+   "mean": 6.474615113409331,
+   "std": 1.6796424198796869,
+   "runs": 10
+  },
+  "80": {
+   "seconds": 200.0,
+   "mean": 7.049741450229169,
+   "std": 1.2213064438992192,
+   "runs": 10
+  },
+  "160": {
+   "seconds": 400.0,
+   "mean": 6.608297097191209,
+   "std": 1.2448813375814036,
+   "runs": 10
+  },
+  "334": {
+   "seconds": 835.0,
+   "mean": 5.554412974497591,
+   "std": 0.0,
+   "runs": 1
+  }
+ },
+ "counts": {
+  "train": {
+   "live": 334,
+   "replay_genuine": 334,
+   "replay_xtts_v2": 300,
+   "replay_your_tts": 0
+  },
+  "dev": {
+   "live": 64,
+   "replay_genuine": 64,
+   "replay_xtts_v2": 60,
+   "replay_your_tts": 0
+  },
+  "test": {
+   "live": 268,
+   "replay_genuine": 268,
+   "replay_xtts_v2": 120,
+   "replay_your_tts": 120
+  }
+ }
+}
